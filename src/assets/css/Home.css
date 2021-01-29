@@ -1,0 +1,18 @@
+.HomeContainer{
+    height: 55vh;
+    width: 50vw;
+    border-radius: 5px 4px;
+    margin: 100px 25vw;
+}
+
+.ContainerElement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ImgContainer{
+    width: 80%;
+    height: 80%;
+}
