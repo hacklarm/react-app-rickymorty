@@ -3,9 +3,9 @@ import api from "../services/Api";
 import "../assets/css/Home.css";
 import { Link } from "react-router-dom";
 
-export default class Detail extends Component {
+export default class DetailEpisode extends Component {
   state = {
-    character: {},
+    episode: {},
   };
 
   componentDidMount() {
@@ -14,9 +14,9 @@ export default class Detail extends Component {
 
   fetchData = async (e) => {
     try {
-      const data = await api.getCharacter(this.props.match.params.ObjetId);
+      const data = await api.getEpisode(this.props.match.params.ObjetId);
       this.setState({
-        character: data,
+        episode: data,
       });
     } catch (error) {
       console.log("Error Data");
@@ -25,33 +25,26 @@ export default class Detail extends Component {
 
   render() {
     return (
-      <div
-        className=" row container mt-5"
-      >
-        <div class="col-md-6"></div>
+      <div className=" row container mt-5">
+        <div className="col-md-6"></div>
         <div className="col-md-4">
           <div className="card bg-dark">
-            <img
-              src={this.state.character.image}
-              className="card-img-top img-fluid"
-              alt="Imagen"
-            />
             <div className="card-body">
               <h5 className="card-title text-white">
-                {this.state.character.name}
+                {this.state.episode.name}
               </h5>
               <ul>
                 <li className="text-white">
-                  species : {this.state.character.species}
+                  air_date : {this.state.episode.air_date}
                 </li>
                 <li className="text-white">
-                  gender : {this.state.character.gender}
+                  episode : {this.state.episode.episode}
                 </li>
                 <li className="text-white">
-                  status : {this.state.character.status}
+                  created : {this.state.episode.created}
                 </li>
               </ul>
-              <Link to="/characters" className="ms-2">
+              <Link to="/episodes" className="ms-2">
                 <button className="btn btn-primary ">Volver</button>
               </Link>
             </div>

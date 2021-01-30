@@ -25,12 +25,18 @@ const getCharacter = async (Elemented) => {
     return response.data
 }
 
+const getEpisode = async (Elemented) => {
+    let response = await axios.get("https://rickandmortyapi.com/api/episode/" + Elemented)
+    return response.data
+}
+
 const api = {
     getData  : getDataApi ,
     getPage : getPageCharacters,
     getAllEpisodes : getDataApiEpisodes,
     getPageEpisode : getPageEpisode ,
     getCharacter : getCharacter,
+    getEpisode : getEpisode
 
 }
 

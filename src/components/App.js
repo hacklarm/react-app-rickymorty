@@ -6,7 +6,8 @@ import Home from '../pages/Home'
 import NoFound from '../pages/NoFound'
 import ListCharacters from '../pages/ListCharacters'
 import ListEpisodes from '../pages/ListEpisodes'
-import Detail from '../pages/Detail'
+import DetailCharacters from '../pages/DetailCharacters'
+import DetailEpisode from '../pages/DetailEpisode'
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/characters" component={ListCharacters} />
           <Route exact path="/episodes" component={ListEpisodes} />
-          <Route exact path="/character/:ObjetId/" component={Detail} />
+          <Route exact path="/character/:ObjetId/" component={DetailCharacters} />
+          <Route exact path="/episode/:ObjetId/" component={DetailEpisode} />
           <Route component={NoFound} />
         </Switch>
       </Layout>

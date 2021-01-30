@@ -75,24 +75,26 @@ export default class ListEpisodes extends Component {
     return (
       <div className="container mt-4">
         <div className="row row-cols-md-4 row-cols-sm-2 col">
-          {this.state.episodes.map((character, id) => {
+          {this.state.episodes.map((episode, id) => {
             return (
               <div className="col mt-4" key={id}>
                 <div className="card bg-dark">
                   <div className="card-body">
-                    <h5 className="card-title text-white">{character.name}</h5>
+                    <h5 className="card-title text-white">{episode.name}</h5>
                     <ul>
                       <li className="text-white">
-                      air_date : {character.air_date}
+                      air_date : {episode.air_date}
                       </li>
                       <li className="text-white">
-                      episode : {character.episode}
+                      episode : {episode.episode}
                       </li>
                       <li className="text-white">
-                        created : {character.created}
+                        created : {episode.created}
                       </li>
                     </ul>
-                    <Link to="/detail" className="ms-2">
+            
+
+                    <Link to={`/episode/${episode.id}`} className="ms-2">
                       <button className="btn btn-primary ">Detail</button>
                     </Link>
                   </div>
