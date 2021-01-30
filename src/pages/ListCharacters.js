@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import api from "../services/Api";
+import api from "../services/Api"
 export default class ListCharacters extends Component {
   state = {
     characters: [],
@@ -101,7 +101,7 @@ export default class ListCharacters extends Component {
                         status : {character.status}
                       </li>
                     </ul>
-                    <Link to="/detail" className="ms-2">
+                    <Link to={`/character/${character.id}`} className="ms-2">
                       <button className="btn btn-primary ">Detail</button>
                     </Link>
                   </div>

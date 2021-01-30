@@ -16,7 +16,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/characters" component={ListCharacters} />
           <Route exact path="/episodes" component={ListEpisodes} />
-          <Route exact path="/detail" component={Detail} />
+          <Route exact path="/character/:ObjetId/" component={Detail} />
           <Route component={NoFound} />
         </Switch>
       </Layout>
