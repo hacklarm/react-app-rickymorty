@@ -16,11 +16,11 @@ class Home extends Component {
 
                     <div className="mt-3">
                         <Link to="/characters" className="mr-2">
-                            <button className="btn btn-light ms-3"  >Personajes</button >
+                            <button className="btn btn-light ms-3"  >Characters</button >
                         </Link>
 
                         <Link to="/episodes" className="ms-2">
-                            <button className="btn btn-light ms-3"  >Capitulos</button >
+                            <button className="btn btn-light ms-3"  >Episodes</button >
                         </Link>
 
                     </div>
